@@ -11,6 +11,10 @@ use Symfony\Component\HttpFoundation\Request;
 use Symfony\Component\HttpFoundation\Response;
 use Symfony\Component\Routing\Annotation\Route;
 
+use Symfony\Component\Form\Extension\Core\Type\TextType;
+use Symfony\Component\Form\Extension\Core\Type\SubmitType;
+
+
 class ProfileController extends AbstractController
 {
     #[Route('/profile', name: 'profile')]
@@ -24,14 +28,34 @@ class ProfileController extends AbstractController
         }
 
         $user = $em->getRepository(User::class)->find($userId);
+        //dump($user->getTokenPhoenixApi());
 
         if (!$user) {
             $session->clear();
             return $this->redirectToRoute('home');
         }
 
+        $form = $this->createFormBuilder($user)
+            ->add('token_phoenix_api', TextType::class, [
+                'label' => 'Token dostępu do PhoenixApi'
+            ])
+            ->add('save', SubmitType::class, ['label' => 'Zapisz'])
+            ->getForm();
+
+        $form->handleRequest($request);
+
+        if ($form->isSubmitted() && $form->isValid()) {
+            $em->persist($user); 
+            $em->flush();
+
+            $this->addFlash('success', 'Token zapisany!');
+            
+            return $this->redirectToRoute('profile');
+        }
+
         return $this->render('profile/index.html.twig', [
             'user' => $user,
+            'form' => $form->createView(),
         ]);
     }
 }

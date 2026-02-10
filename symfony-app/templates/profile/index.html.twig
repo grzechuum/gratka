@@ -72,6 +72,10 @@
             color: #333;
             word-wrap: break-word;
         }
+
+        .profile-field.form{
+            margin-top:10px;
+        }
         
         .profile-field-empty {
             color: #999;
@@ -113,6 +117,21 @@
             transition: transform 0.2s ease, box-shadow 0.2s ease;
             box-shadow: 0 4px 12px rgba(102, 126, 234, 0.3);
         }
+
+        button[type='submit'] {
+            display: inline-block;
+            margin-top: 5px;
+            border:none;
+            cursor:pointer;
+            padding: 12px 30px;
+            background: linear-gradient(135deg, #aa66ea 0%, #4f0f8f 100%);
+            color: white;
+            text-decoration: none;
+            border-radius: 25px;
+            font-weight: 600;
+            transition: transform 0.2s ease, box-shadow 0.2s ease;
+            box-shadow: 0 4px 12px rgba(102, 126, 234, 0.3);
+        }
         
         .back-button:hover {
             transform: translateY(-2px);
@@ -144,6 +163,17 @@
             color: #999;
             text-transform: uppercase;
             letter-spacing: 0.5px;
+        }
+
+        input[type='text'] {
+            width:100%;
+            margin-top:10px;
+            padding:10px 10px;
+            font-size:1em;
+            border:1px solid #666;
+            color:#666;
+            border-radius:5px 5px;
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
         }
     </style>
 {% endblock %}
@@ -196,7 +226,16 @@
                 <div class="profile-bio-text">{{ user.bio }}</div>
             </div>
         {% endif %}
-        
+
+        <div class="profile-field form">
+            {{ form_start(form) }}
+            <div class="profile-field-label">
+                {{ form_row(form.token_phoenix_api) }}
+            </div>
+            {{ form_row(form.save) }}
+            {{ form_end(form) }}
+        </div>
+
         <div class="profile-stats">
             <div class="stat-item">
                 <div class="stat-number">{{ user.photos|length }}</div>

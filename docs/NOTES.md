@@ -1,3 +1,5 @@
+Zadanie 1.
+
 1. Można było się zalogować tokenem innego użytkownika. 
 
 sampel: http://localhost:8000/auth/wildlife_pro/9e3c05f8d2aad0fb5f655fc0893a55d0232d4302adf8f6d5be984fa523f64ffa
@@ -11,7 +13,7 @@ Od razu to czego mi zabrakło to przycisku do logowania. Proces autoryzacji powi
 
 PS: pomijam tutaj fatal errory gdy nie przekażemy parametrów username i token do route /auth/{username}/{token}, bo to juz jest oczywiste.
 
-2. Nie podoba mi się to że mimo iż kliknę wyloguj to nadal moge wrócić na stronę profilu. (back history)
+2. Nie podoba mi się to że mimo iż kliknę wyloguj to nadal moge wrócić na stronę profilu. (back history) tutaj trzeba dodać warunek jak brak sesji to redirectToRoute('home')
 
 3. Like'owanie swoich zdjęć chyba nie jest błędem do wykrycia :)
 
@@ -24,3 +26,6 @@ dodałem w templates/home/index.html.twig dodatkwoy css z breakpointami dla .pho
 6. Okragły przycisk dostępu do profilu nachodzi na logotyp "insta shot" - na widoku mobile < 450 px
 
 7. Pola w bazie w tabeli users typu varchar są zdecydowanie za długie, username, email 255 znaków ??? W późniejszym czasie gdy będzie potrzeba dużo indeksów to niepotrzebnie zabieramy zasoby pamięci podręcznej.
+
+
+Zadanie 2.
