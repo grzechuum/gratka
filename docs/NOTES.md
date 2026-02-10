@@ -7,7 +7,7 @@ Od razu to czego mi zabrakło to przycisku do logowania. Proces autoryzacji powi
 
 1a. Jestem poczatkujący w Symphony, ale zauwazyłem że zmienne przekazane w url są bezpośrednio podstawiane pod zapytania sql, taki system można w prosty sposób wywalić zapomoca sql injection. Szlak mnie trafia gdy to widzę bo to nie wina programisty, powinna być jakaś warstwwa chroniąca we frameworkach przed tego typu zagraniami, podobny problem napotkałem w jednym z mechanizmów w Prestashop - gdzie atakujący sukcesywnie wywalał serwer wysyłając skrupulatnie przygotowany request. W naszych systemach nagminie korzystamy z trim() i addslashes() stripslashes().
 
-1 i 1a Skorygowane w AuthController.php za pomocą fetchAssociative gdzie pod spodem jest znane mi już PDO i tam są mechanizmy które automatyczcnie escapują wartości zmiennych.
+1 i 1a Skorygowane w AuthController.php za pomocą fetchAssociative gdzie pod spodem jest znane mi już PDO i tam są mechanizmy które automatyczcnie escapują wartości zmiennych. Wsumie AI podpowiedział że executeQuery tez escapuje ale trzba użyć bindowania zmiennych a nie przekazywac zmienne  w stringu sql.
 
 2. Nie podoba mi się to że mimo iż kliknę wyloguj to nadal moge wrócić na stronę profilu. (back history)
 
