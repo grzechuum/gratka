@@ -9,29 +9,18 @@ Od razu to czego mi zabrakło to przycisku do logowania. Proces autoryzacji powi
 
 1 i 1a Skorygowane w AuthController.php za pomocą fetchAssociative gdzie pod spodem jest znane mi już PDO i tam są mechanizmy które automatyczcnie escapują wartości zmiennych. Wsumie AI podpowiedział że executeQuery tez escapuje ale trzba użyć bindowania zmiennych a nie przekazywac zmienne  w stringu sql.
 
+PS: pomijam tutaj fatal errory gdy nie przekażemy parametrów username i token do route /auth/{username}/{token}, bo to juz jest oczywiste.
+
 2. Nie podoba mi się to że mimo iż kliknę wyloguj to nadal moge wrócić na stronę profilu. (back history)
 
 3. Like'owanie swoich zdjęć chyba nie jest błędem do wykrycia :)
 
-4. Like'owanie odświeża stronę, co na wersji mobilnej przewija całość do góry i będzie bardzo irytyujące dla usera, ta funkcja powinna być przerobiona na request wysłany za pomoca javascript (request wysłany ajaxem).  
+4. Like'owanie odświeża stronę, co na wersji mobilnej przewija całość do góry i będzie bardzo irytyujące dla usera, ta funkcja powinna być przerobiona na request wysłany za pomoca javascript (np wysłany ajaxem).  
 
 5. Brak responsywnego photo-grida, na poszczególnych breakpointach widok jest obcinany.
 
-dodałem w templates/home/index.html.twig dodatkwoy css
+dodałem w templates/home/index.html.twig dodatkwoy css z breakpointami dla .photo-grid
 
-        @media (max-width: 1200px) {
-            .photo-grid {
-                grid-template-columns: repeat(2, 380px);
-            }
-        }
-
-
-        @media (max-width: 800px) {
-            .photo-grid {
-                grid-template-columns: 1fr; /* jedna kolumna, komórki w pełnej szerokości */
-            }
-        }
-
-6. Okragły przycisk dostępu do profilu nachodzi na logotyp insta shot - na widoku mobile < 450 px
+6. Okragły przycisk dostępu do profilu nachodzi na logotyp "insta shot" - na widoku mobile < 450 px
 
 7. Pola w bazie w tabeli users typu varchar są zdecydowanie za długie, username, email 255 znaków ??? W późniejszym czasie gdy będzie potrzeba dużo indeksów to niepotrzebnie zabieramy zasoby pamięci podręcznej.
