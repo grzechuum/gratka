@@ -31,6 +31,8 @@ dodałem w templates/home/index.html.twig dodatkowy css z breakpointami dla klas
 
 10. Sprawdziłem bazy i relacje są ustawione poprawnie włącznie z kaskadowym usuwanie. Samego usuwania nie przeprowadzałem ale wygląda ok. Może tylko dla apki symfony dla wszystkich tabel id dałbym typu bigint.
 
+11. Wykluczyłem docker-compose.yml w .gitignore
+
 ## Zadanie 2.
 
 Tutaj nie miałem większych problemów.
