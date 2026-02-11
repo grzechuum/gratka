@@ -132,6 +132,22 @@
             transition: transform 0.2s ease, box-shadow 0.2s ease;
             box-shadow: 0 4px 12px rgba(102, 126, 234, 0.3);
         }
+
+        button.btn-secondary {
+            display: inline-block;
+            margin-top: 5px;
+            border:none;
+            cursor:pointer;
+            padding: 12px 30px;
+            background: linear-gradient(135deg, #96909c 0%, #5b5561 100%);
+            color: white;
+            text-decoration: none;
+            border-radius: 25px;
+            font-weight: 600;
+            float:right;
+            transition: transform 0.2s ease, box-shadow 0.2s ease;
+            box-shadow: 0 4px 12px rgba(102, 126, 234, 0.3);
+        }
         
         .back-button:hover {
             transform: translateY(-2px);
@@ -232,7 +248,8 @@
             <div class="profile-field-label">
                 {{ form_row(form.token_phoenix_api) }}
             </div>
-            {{ form_row(form.save) }}
+            {{ form_widget(form.save) }}
+            {{ form_widget(form.fetch) }}
             {{ form_end(form) }}
         </div>
 
