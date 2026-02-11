@@ -29,5 +29,10 @@ dodałem w templates/home/index.html.twig dodatkowy css z breakpointami dla klas
 
 
 Zadanie 2.
+Tutaj nie miałem większych problemów.
 Po urlu sprawdzam czy takie zdjęcie nie zostało już zaimportowane.
 Można tutaj w profilu usera rozbudowac formatkę o udostpenione zdjęcia z możliwością kategoryzowania lub usuwania fotek. Formatkę do wgrywania dużej ilośći zdjęć poprzez drop area itp, automatyczne przycinanie, kompresję do webp itp.
+
+![Formatka](1.jpg)
+
+![Zaimportowane fotki](2.jpg)
