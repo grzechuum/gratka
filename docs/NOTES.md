@@ -46,3 +46,19 @@ Można tutaj w profilu usera rozbudować formatkę o udostpenione zdjęcia z mo�
 ## Zadanie 3.
 
 ![Formatka](3.jpg)
+
+## Podsumowanie i testy jednostkowe
+
+Nie wprowadzam do repozytorium testów jednostkowych ponieważ tak jak podałem przy rozmowie z Natalią, nigdy w dotychczasowej pracy ich nie tworzyliśmy. Testy wykonywaliśmy manualnie, na wszystkich przeglądarkach jak jeszcze królował IE i urządzeniach mobilnych etc :) także layouty RWD badane była manualnie na dev i ponownie później na produkcji.  
+
+Mimo to wygenerowałem je sobie w AI i nie stanowią dla mnie większego problemu, kilka wieczorów i chyba temat do ogarnięcia. Tym bardziej, że podstawy mam, ponieważ dość często korzystam z mechanizmu skrapowania dynamicznych stron znajdujących się za różnymi mechanizmami recapcha, i np c# w visual studio używam pakietów Selenium Chrome WebDriver, gdzie dzięki selector badam czy dany element już się pojawił i co wykonać dalej.
+
+W obecnej firmie ponad 20 lat rozwijaliśmy dedykowane oprogramowanie, orogramowanie które sprzedawaliśmy także naszym klientom, niektórzy prosili nas o support ich obecnych  środowisk w Laravelu, frameworku Zend, od kilku lat wspierałem także ecommerce Kakadu.pl napisany i niesamowicie skustomizowany na Prestashop. 
+
+W Symfony jestem nowicjuszem. Na frontendzie używam generalnie jQuery i Bootstrap'a. Angualr i React zapewne do ogarnięcia, ale do tej pory nie pisałem nic w tych frameworkach. Na życzenie mogę udostępnić demo mojego autorskiego systemu CMS, napisanego w czystym PHP na którym postawiłem ponad 20 serwisów internetowych i aplikacji. 
+Generalnie CMS ukazuje estetykę jaką się posługuję, wyłuczoną wieloletnią pracą z firmami kosmetycznymi.
+
+Jęz. angielski coś pomiędzy B1 a B2, w dokumentacji i mailach bez granic, werbalnie raczej proste do ogarnięcia tematy.
+
+Serdecznie pozdrawiam, życzę miłego dnia 
+Grzesiek
