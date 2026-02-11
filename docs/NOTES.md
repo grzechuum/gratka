@@ -45,6 +45,8 @@ Można tutaj w profilu usera rozbudować formatkę o udostpenione zdjęcia z mo�
 
 ## Zadanie 3.
 
+Też bez problemów, wybrany filtr sprawdzam czy należy do zdefiniowanego słownika a następnie przekazuję do funckji filtrującej. Przerobiłem PhotoRepository.php aby brał pod uwagę pole po kórym sortujemy oraz kierunek sortowania.
+
 ![Formatka](3.jpg)
 
 ## Podsumowanie i testy jednostkowe
@@ -61,4 +63,5 @@ Generalnie CMS ukazuje estetykę jaką się posługuję, wyłuczoną wieloletni�
 Jęz. angielski coś pomiędzy B1 a B2, w dokumentacji i mailach bez granic, werbalnie raczej proste do ogarnięcia tematy.
 
 Serdecznie pozdrawiam, życzę miłego dnia 
+
 Grzesiek
