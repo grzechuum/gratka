@@ -39,10 +39,10 @@ Po urlu sprawdzam czy takie zdjęcie nie zostało już zaimportowane. W pętli z
 
 Można tutaj w profilu usera rozbudować formatkę o udostpenione zdjęcia z możliwością kategoryzowania lub usuwania fotek. Formatkę do wgrywania dużej ilośći zdjęć poprzez drop area itp, automatyczne przycinanie, kompresję do webp itp.
 
-![Formatka](1.jpg)
+![Formatka](1a.jpg)
 
 ![Zaimportowane fotki](2.jpg)
 
 ## Zadanie 3.
 
-![Formatka](3a.jpg)
+![Formatka](3.jpg)
