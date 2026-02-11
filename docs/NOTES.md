@@ -45,4 +45,4 @@ Można tutaj w profilu usera rozbudować formatkę o udostpenione zdjęcia z mo�
 
 ## Zadanie 3.
 
-![Formatka](3.jpg)
+![Formatka](3a.jpg)
