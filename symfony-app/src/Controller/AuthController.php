@@ -15,7 +15,6 @@ class AuthController extends AbstractController
     #[Route('/auth/{username}/{token}', name: 'auth_login')]
     public function login(string $username, string $token, Connection $connection, Request $request): Response
     {
-        //najpierw sprawdźmy czy jest taki user i zwrocmy jego ID
         $sql = "SELECT * FROM users WHERE username = :username ";
         $userData = $connection->fetchAssociative($sql, [
             'username' => $username
@@ -25,7 +24,6 @@ class AuthController extends AbstractController
             return new Response('Wrong username', 401);
         }
     
-        //teraz token ale weźmy też id usera
         $sql = "SELECT * FROM auth_tokens WHERE token = :token and user_id = :user_id";
         $tokenData = $connection->fetchAssociative($sql, [
             'token' => $token,

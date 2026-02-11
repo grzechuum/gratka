@@ -15,12 +15,12 @@ class PhotoRepository extends ServiceEntityRepository
         parent::__construct($registry, Photo::class);
     }
 
-    public function findAllWithUsers(): array
+    public function findAllWithUsers($sort = 'p.id', $order = 'ASC'): array
     {
         return $this->createQueryBuilder('p')
             ->leftJoin('p.user', 'u')
             ->addSelect('u')
-            ->orderBy('p.id', 'ASC')
+            ->orderBy($sort, $order)
             ->getQuery()
             ->getResult();
     }

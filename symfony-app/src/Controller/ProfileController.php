@@ -40,11 +40,11 @@ class ProfileController extends AbstractController
 
         $form = $this->createFormBuilder($user)
             ->add('token_phoenix_api', TextType::class, [
-                'label' => 'Token dostępu do PhoenixApi'
+                'label' => 'Access token to PhoenixApi'
             ])
-            ->add('save', SubmitType::class, ['label' => 'Zapisz'])
+            ->add('save', SubmitType::class, ['label' => 'Save'])
             ->add('fetch', SubmitType::class, [
-                'label' => 'Importuj zdjęcia z Phoenix',
+                'label' => 'Import from Phoenix',
                 'attr' => [
                     'class' => 'btn-secondary'
                 ],
@@ -58,7 +58,7 @@ class ProfileController extends AbstractController
                 $em->persist($user); 
                 $em->flush();
 
-                $this->addFlash('success', 'Token zapisany!');
+                $this->addFlash('success', 'Token saved!');
                 
                 return $this->redirectToRoute('profile');
             }
@@ -68,7 +68,7 @@ class ProfileController extends AbstractController
                     $user->getTokenPhoenixApi()
                 );
                 if(isset($response['authorized']) && !$response['authorized']){
-                    $this->addFlash('error', 'Błędny token!');
+                    $this->addFlash('error', 'Token error!');
                 } elseif(count((array)$response['photos'])>0){
                     //dump($response['photos']);
                     $imported=0;
@@ -87,9 +87,9 @@ class ProfileController extends AbstractController
                             ]);
                         }
                     }
-                    $this->addFlash('success', 'Zaimportowano zdjęć: '.$imported);
+                    $this->addFlash('success', 'Imported photos: '.$imported);
                 } else {
-                    $this->addFlash('success', 'Brak przypisanych zdjęć.');
+                    $this->addFlash('success', 'No photos.');
                 }
             }
         }

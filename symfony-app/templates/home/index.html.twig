@@ -163,11 +163,41 @@
             font-size: 2em;
             margin-bottom: 10px;
         }
+
+        .btn-primary {
+            display: inline-block;
+            margin-top: 5px;
+            border:none;
+            cursor:pointer;
+            padding: 12px 30px;
+            background: linear-gradient(135deg, #aa66ea 0%, #4f0f8f 100%);
+            color: white;
+            text-decoration: none;
+            border-radius: 25px;
+            font-weight: 600;
+            transition: transform 0.2s ease, box-shadow 0.2s ease;
+            box-shadow: 0 4px 12px rgba(102, 126, 234, 0.3);
+        }
+        .select-filter{
+            padding:10px;
+            border-radius:30px 30px;
+            border:1px solid #efefef;
+            color:#333;
+        }
     </style>
 {% endblock %}
 
 {% block body %}
     {% if photos|length > 0 %}
+
+        <div class="sort-by">
+            {{ form_start(form) }}
+            {{ form_widget(form.sort) }}
+            {{ form_widget(form.filter) }}
+            {{ form_end(form) }}
+        </div>
+
+
         <div class="photo-grid">
             {% for photo in photos %}
                 <div class="photo-card">
